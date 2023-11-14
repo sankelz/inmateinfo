@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Orange County | Inmate Search</title>
+  <link rel="stylesheet" href="styles.css">
+<style>
+/* Basic CSS for layout and styling */
+/* You can add more styles for different elements */
+
+/* Basic CSS for layout and styling */
+/* You can add more styles for different elements */
+
+body {
+  font-family: 'Times New Roman', Times, serif; /* Setting the font-family */
+  margin: 0;
+  padding: 0;
+  font-size: 18px; /* Increasing the font size */
+  background-color: #f2f2f2; 
+}
+
+header {
+  background-color: #333;
+  color: gold; /* Changing the text color to gold */
+  padding: 20px; /* Increasing header padding */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center; 
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  color: gold; /* Changing the text color to gold */
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: gold; /* Changing the text color to gold */
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+}
+/* Additional CSS for dropdown menu */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border-radius: 15px; 
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 15px; 
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 15px; 
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Updated CSS for image container and text block */
+
+.main {
+  width: 110%; /* To occupy the full width */
+}
+
+.form-container {
+  text-align: center;
+  margin-top: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.form-container h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}.form-container input {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+width: 80%;
+}
+.form-container button {
+  margin: 5px
+  width: 60%; /* Adjust the width of the button */
+  background-color: black; /* Set the background color to black */
+  color: white; /* Set the text color to white */
+    padding: 10px;
+  border-radius: 5px;
+}
+
+/* Adjusted image container */
+.image-container {
+  position: relative;
+  background-image: url('holdinghands.jpg');
+  background-size: cover;
+  height: 1000px;
+  /* Set height as per your design */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}.line {
+  border-top: 1px white;
+  margin: 5px 0;
+}
+
+</style>
+</head>
+<body style="background-color: #616161;">
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="landingpage.html">ABOUT</a></li>
+      <li><a href="landingpage2.html">ESPAÑOL</a></li>
+    <li class="dropdown">
+        <a href="#locations" class="dropbtn">LOCATIONS &#9662;</a>
+        <div class="dropdown-content">
+          <a href="landingpage4.html">SAN BERNARDINO COUNTY</a>
+          <a href="landingpage5.html">RIVERSIDE COUNTY</a>
+          <a href="landingpage6.html">ORANGE COUNTY</a>
+        </div>
+      </li>
+      <li><a href="landingpage3.html">FAQs</a></li>
+    </ul>
+  </nav>
+</header>
+    <div class="line"></div>
+<header>
+    <center><h2>ORANGE COUNTY</h2></center>
+    <center><p>This website is designed to assist you in finding Orange County inmates. The Orange County Jail is located at 550 N Flower St, Santa Ana, CA 92703. If you have any questions regarding this, please fill out the form and we will contact you immediately or call us at 714-634-1188. </p></center>
+  </div>
+</header>
+
+<main>
+  <div class="image-container">
+    <div class="form-container">
+      <h2>County Inmate Information</h2>
+      <form id="emailForm" action="emailsend.php" method="post" enctype="text/plain">
+	<input type="hidden" name="location" value="Orange County">
+        <input type="text" name="name" placeholder="Inmate's Name">
+        <input type="text" name="dob" placeholder="Inmate's D.O.B. (dd/mm/yyyy)">
+        <input type="text" name="name2" placeholder="Your Name">
+        <input type="text" name="phone" placeholder="Your Phone Number">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2023. Website designed purely for informational purposes regarding Southern California county bailing</p>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>

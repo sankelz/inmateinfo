@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Condado de Orange | Inmate Search</title>
+  <link rel="stylesheet" href="styles.css">
+<style>
+/* CSS básico para diseño y estilo */
+/* Puedes agregar más estilos para diferentes elementos */
+
+body {
+  font-family: 'Times New Roman', Times, serif; /* Configuración de la fuente */
+  margin: 0;
+  padding: 0;
+  font-size: 18px; /* Aumento del tamaño de la fuente */
+  background-color: #f2f2f2; 
+}
+
+header {
+  background-color: #333;
+  color: gold; /* Cambio del color del texto a dorado */
+  padding: 20px; /* Aumento del relleno del encabezado */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center; 
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  color: gold; /* Cambio del color del texto a dorado */
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: gold; /* Cambio del color del texto a dorado */
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+}
+/* CSS adicional para menú desplegable */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border-radius: 15px; 
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 15px; 
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 15px; 
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* CSS actualizado para contenedor de imagen y bloque de texto */
+
+.main {
+  width: 110%; /* Para ocupar todo el ancho */
+}
+
+.form-container {
+  text-align: center;
+  margin-top: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.form-container h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}.form-container input {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+width: 80%;
+}
+.form-container button {
+  margin: 5px;
+  width: 60%; /* Ajuste del ancho del botón */
+  background-color: black; /* Establecer el color de fondo a negro */
+  color: white; /* Establecer el color del texto a blanco */
+    padding: 10px;
+  border-radius: 5px;
+}
+
+/* Contenedor de imagen ajustado */
+.image-container {
+  position: relative;
+  background-image: url('holdinghands.jpg');
+  background-size: cover;
+  height: 1000px;
+  /* Establecer la altura según tu diseño */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.line {
+  border-top: 1px white;
+  margin: 5px 0;
+}
+
+</style>
+</head>
+<body style="background-color: #616161;">
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="landingpage2.html">ACERCA DE</a></li>
+      <li><a href="landingpage.html">ESPAÑOL</a></li>
+      <li class="dropdown">
+        <a href="#locations" class="dropbtn">UBICACIONES &#9662;</a>
+        <div class="dropdown-content">
+          <a href="landingpage7.html">CONDADO DE SAN BERNARDINO</a>
+          <a href="landingpage8.html">CONDADO DE RIVERSIDE</a>
+          <a href="landingpage9.html">CONDADO DE ORANGE</a>
+        </div>
+      </li>
+      <li><a href="landingpage10.html">PREGUNTAS FRECUENTES</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="line"></div>
+<header>
+    <center><h2>CONDADO DE ORANGE</h2></center>
+    <center><p>Este sitio web está diseñado para ayudarte a encontrar reclusos del condado de Orange. La cárcel del condado de Orange está ubicada en 550 N Flower St, Santa Ana, CA 92703. Si tienes alguna pregunta al respecto, por favor completa el formulario y nos pondremos en contacto contigo de inmediato o llámanos al 714-634-1188.</p></center>
+  </div>
+</header>
+
+<main>
+  <div class="image-container">
+    <div class="form-container">
+      <h2>Información del Recluso del Condado</h2>
+      <form id="emailForm" action="emailsend.php" method="post" enctype="text/plain">
+	<input type="hidden" name="location" value="Orange County">
+        <input type="text" name="name" placeholder="Nombre del Recluso">
+        <input type="text" name="dob" placeholder="Fecha de Nacimiento del Recluso (dd/mm/aaaa)">
+        <input type="text" name="name2" placeholder="Tu Nombre">
+        <input type="text" name="phone" placeholder="Tu Número de Teléfono">
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2023. Sitio web diseñado únicamente con fines informativos sobre fianzas en el sur de California</p>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>
+
